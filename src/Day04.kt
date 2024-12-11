@@ -6,8 +6,8 @@ fun main() {
     fun find(startLetter: Letter, xIncrement: Int, yIncrement: Int, letters: List<Letter>): Int {
         val wordPresent =
                 letters.any { innerLetter -> innerLetter.x == startLetter.x + xIncrement && innerLetter.y == startLetter.y + yIncrement && innerLetter.c == 'M' } &&
-                        letters.any { innerLetter -> innerLetter.x == startLetter.x + (xIncrement * 2) && innerLetter.y == startLetter.y + (yIncrement * 2) && innerLetter.c == 'A' } &&
-                        letters.any { innerLetter -> innerLetter.x == startLetter.x + (xIncrement * 3) && innerLetter.y == startLetter.y + (yIncrement * 3) && innerLetter.c == 'S' }
+                letters.any { innerLetter -> innerLetter.x == startLetter.x + (xIncrement * 2) && innerLetter.y == startLetter.y + (yIncrement * 2) && innerLetter.c == 'A' } &&
+                letters.any { innerLetter -> innerLetter.x == startLetter.x + (xIncrement * 3) && innerLetter.y == startLetter.y + (yIncrement * 3) && innerLetter.c == 'S' }
         if (wordPresent) return 1
         return 0
     }
@@ -30,8 +30,8 @@ fun main() {
         val s2 = letters.any { innerLetter -> innerLetter.x == startLetter.x - 1 && innerLetter.y == startLetter.y - 1 && innerLetter.c == 'S' }
         val m3 = letters.any { innerLetter -> innerLetter.x == startLetter.x + 1 && innerLetter.y == startLetter.y - 1 && innerLetter.c == 'M' }
         val s3 = letters.any { innerLetter -> innerLetter.x == startLetter.x - 1 && innerLetter.y == startLetter.y + 1 && innerLetter.c == 'S' }
-        val s4 = letters.any { innerLetter -> innerLetter.x == startLetter.x + 1 && innerLetter.y == startLetter.y - 1 && innerLetter.c == 'S' }
         val m4 = letters.any { innerLetter -> innerLetter.x == startLetter.x - 1 && innerLetter.y == startLetter.y + 1 && innerLetter.c == 'M' }
+        val s4 = letters.any { innerLetter -> innerLetter.x == startLetter.x + 1 && innerLetter.y == startLetter.y - 1 && innerLetter.c == 'S' }
 
         val mas1 = (m1 && s1) || (s2 && m2)
         val mas2 = (m3 && s3) || (s4 && m4)
