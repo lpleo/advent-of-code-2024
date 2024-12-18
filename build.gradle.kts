@@ -13,3 +13,7 @@ tasks {
         gradleVersion = "8.11.1"
     }
 }
+
+dependencies {
+    implementation("com.google.code.gson:gson:2.7")
+}
