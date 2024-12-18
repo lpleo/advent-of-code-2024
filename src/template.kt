@@ -12,11 +12,11 @@ fun main() {
     val part1 = part1(testInput)
     println(part1)
     check(part1 == 1)
+    val input = readInput("Day0")
+    part1(input).println()
+
     val part2 = part2(testInput)
     println(part2)
     check(part2 == 1)
-
-    val input = readInput("Day0")
-    part1(input).println()
     part2(input).println()
 }
