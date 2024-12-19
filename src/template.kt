@@ -8,11 +8,11 @@ fun main() {
         return input.size
     }
 
-    val testInput = readInput("Day0_test")
+    val testInput = readInput("%DAY%_test")
     val part1 = part1(testInput)
     println(part1)
     check(part1 == 1)
-    val input = readInput("Day0")
+    val input = readInput("%DAY%")
     part1(input).println()
 
     val part2 = part2(testInput)
